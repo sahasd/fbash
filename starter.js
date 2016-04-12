@@ -3,12 +3,12 @@
 // if appstate has not already been saved, prompts user for credentials and saves appstate
 // runs fbash as a daemon using forever
 
-var forever = require('forever'),
-	readlineSync = require('readline-sync'),
-	fs = require('fs'),
-	login = require('facebook-chat-api'),
-	path = require('path'),
-	homedir = require('homedir')();
+var forever = require('forever');
+var readlineSync = require('readline-sync');
+var fs = require('fs');
+var login = require('facebook-chat-api');
+var path = require('path');
+var homedir = require('homedir')();
 
 // if fbash processes are already running, stop them
 forever.list(false, function(err, data){
